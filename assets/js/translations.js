@@ -3,10 +3,10 @@ function(n) {
     localization.translate = {
 
       menu: function() {
-        $('#welcome-menu').text(i18n.__('Welcome'));
-        $('#whoweare-menu').text(i18n.__('Who we are'));
-        $('#whatwedo-menu').text(i18n.__('What we do'));
-        $('#getintouch-menu').text(i18n.__('Get in touch'));
+        $('#aboutus-menu').text(i18n.__('About'));
+        $('#whoweare-menu').text(i18n.__('Our Clients'));
+        $('#ourwork-menu').text(i18n.__('Our Work'));
+        $('#howwework-menu').text(i18n.__('How we work'));
 
       },
 

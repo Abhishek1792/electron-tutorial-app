@@ -8,32 +8,39 @@
 	<head>
 		<title>Electron tutorial app</title>
 		<meta charset="utf-8" />
+		<meta http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/eta-app.css" />
     <link rel="import" href="sections/getintouch.html">
-    <link rel="import" href="sections/welcome.html">
+	<link rel="import" href="sections/aboutus.html">
     <link rel="import" href="sections/dialog.html">
     <link rel="import" href="sections/ipcremote.html">
 	</head>
 	<body>
+	<!-- <object data="assets/pdf/samplepdf.pdf" width="500" height="500">
+									</object> -->
+	<iframe src="assets/pdf/samplepdf.pdf" frameborder="0" width="100%" height="100%"></iframe>
 
+	<video width="320" height="240" controls>
+		<source src="assets/pdf/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+	</video>
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
 					<nav>
 						<ul>
-							<li><a id="welcome-menu" data-section="welcome" href="#">Welcome</a></li>
-							<li><a id="whoweare-menu" data-section="ipcremote" href="#">IPC/Remote</a></li>
-							<li><a id="dialog-menu" data-section="dialog" href="#">Dialog</a></li>
-							<li><a id="getintouch-menu" data-section="getintouch" href="#">Get in touch</a></li>
+							<li><a id="aboutus-menu" data-section="aboutus" href="pages/logincomplete.html">About</a></li>
+							<li><a id="whoweare-menu" data-section="ipcremote" href="#">whoweare Clients</a></li>
+							<li><a id="ourwork-menu" data-section="dialog" href="#">dialog Work</a></li>
+							<li><a id="howwework-menu" data-section="getintouch" href="#">How we work</a></li>
 						</ul>
 					</nav>
+			
 					<div class="version-info">
-						Tested with Electron v5.0.8
-					</div>
-					<div class="version-info">
-						(Currently running Electron v<script>document.write(process.versions.electron)</script>)
+						<span id="electron-version"></span>
 					</div>
 				</div>
 			</section>
@@ -52,18 +59,18 @@
 			</footer>
 
 		<!-- Scripts -->
-      <script>window.$ = window.jQuery = require('./assets/js/jquery.min.js');</script>
-			<script>window.i18n = new(require('./translations/i18n'));</script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
+	<!-- <script>window.$ = window.jQuery = require('./assets/js/jquery.min.js');</script>
+																											<script>window.i18n = new (require('./translations/i18n'));</script> -->
+	<!-- <script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-      <script>
+			<script src="assets/js/main.js"></script> -->
+			<!-- <script>
         require('./assets/js/menu')
 				require('./assets/js/translations')
 				require('./assets/js/ipc')
 				require('./assets/js/dialog')
-      </script>
+	</script> -->
 	</body>
 </html>
